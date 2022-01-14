@@ -39,7 +39,7 @@ resource "google_compute_instance" "vm" {
     machine_type = var.instance_type
     tags = ["moshe", "owner"]
     labels = {
-    owner = "Moshe"
+    owner = "moshe"
   }
 
     metadata = {
