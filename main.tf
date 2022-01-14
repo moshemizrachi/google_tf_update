@@ -37,7 +37,7 @@ resource "google_compute_firewall" "firewall" {
 resource "google_compute_instance" "vm" {
     name         = "${var.prefix}-vm-${random_id.suffix.hex}"
     machine_type = var.instance_type
-    tags = ["moshe", "owner"]
+    tags = ["moshe-private"]
     labels = {
     owner = "moshe"
   }
