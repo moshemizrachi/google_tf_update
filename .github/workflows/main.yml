@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install or Update EaaS
-        uses: cloudify-cosmo/install-or-update@v1.1
+        uses: jrzeszutek/install-or-update-action@v1.2.1
         with:
           environment-name: $EAAS_DEPLOYMENT_ID
           blueprint-id: $EAAS_BLUEPRINT_ID
