@@ -16,14 +16,14 @@ jobs:
           environment-name: $EAAS_DEPLOYMENT_ID
           blueprint-id: $EAAS_BLUEPRINT_ID
           delete-old-blueprint: false
-          inputs-file: .github/inputs/inputs.yaml
+          inputs-file: ".github/inputs/inputs.yaml"
     
       - name: Execute installation workflow
         uses: cloudify-cosmo/execute-workflow-action@v1.1
         with:
           environment-name: $EAAS_DEPLOYMENT_ID
           workflow: "reload_terraform_template"
-          parameters-file: "reload-tf-params.json"
+          parameters-file: ".github/reload-tf-params.json"
           
 env:
   CLOUDIFY_HOST: ${{ secrets.CLOUDIFY_HOST }}
