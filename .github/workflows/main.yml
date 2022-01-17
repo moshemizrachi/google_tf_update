@@ -10,20 +10,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Install or Update EaaS
-        uses: jrzeszutek/install-or-update-action@v1.2.1
-        with:
-          environment-name: $EAAS_DEPLOYMENT_ID
-          blueprint-id: $EAAS_BLUEPRINT_ID
-          delete-old-blueprint: false
-          inputs-file: ".github/inputs/inputs.yaml"
-    
-      #- name: Execute installation workflow
-        #uses: cloudify-cosmo/execute-workflow-action@v1.1
+      #- name: Install or Update EaaS
+        #uses: jrzeszutek/install-or-update-action@v1.2.1
         #with:
           #environment-name: $EAAS_DEPLOYMENT_ID
-          #workflow: "reload_terraform_template"
-          #parameters-file: ".github/reload-tf-params.json"
+          #blueprint-id: $EAAS_BLUEPRINT_ID
+          #delete-old-blueprint: false
+          #inputs-file: ".github/inputs/inputs.yaml"
+    
+      - name: Execute installation workflow
+        uses: cloudify-cosmo/execute-workflow-action@v1.1
+        with:
+          environment-name: $EAAS_DEPLOYMENT_ID
+          workflow: "reload_terraform_template"
+          parameters-file: ".github/reload-tf-params.json"
           
 env:
   CLOUDIFY_HOST: ${{ secrets.CLOUDIFY_HOST }}
