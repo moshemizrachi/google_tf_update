@@ -1,6 +1,6 @@
 #  workflow for Infrastracture update #
 
-name: CI
+name: Infra
 on:
   push:
     branches: [ main ]
