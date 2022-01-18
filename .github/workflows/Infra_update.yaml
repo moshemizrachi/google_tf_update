@@ -4,8 +4,8 @@ name: CI
 on:
   push:
     branches: [ main ]
-    paths:
-    - .github/tf/*
+    #paths:
+    #- .github/tf/*
 jobs:
   develop:
     runs-on: ubuntu-latest
