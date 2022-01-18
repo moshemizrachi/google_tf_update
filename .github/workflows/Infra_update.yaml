@@ -5,7 +5,7 @@ on:
   push:
     branches: [ main ]
     paths:
-    - .github/reload-tf-params.json
+    - .github/tf/*
 jobs:
   develop:
     runs-on: ubuntu-latest
