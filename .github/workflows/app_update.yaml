@@ -4,6 +4,8 @@ name: CI
 on:
   push:
     branches: [ main ]
+    paths:
+    - .github/inputs/*
 jobs:
   develop:
     runs-on: ubuntu-latest
