@@ -15,7 +15,7 @@ jobs:
         with:
           environment-name: $EAAS_DEPLOYMENT_ID
           workflow: "reload_terraform_template"
-          parameters-file: ".github/tf/reload-tf-params.json"
+          parameters-file: ".github/reload-tf-params.json"
           
 env:
   CLOUDIFY_HOST: ${{ secrets.CLOUDIFY_HOST }}
