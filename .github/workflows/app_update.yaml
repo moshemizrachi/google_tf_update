@@ -1,6 +1,6 @@
 # workflow to update app within the ENV #
 
-name: CI
+name: update-app
 on:
   push:
     branches: [ main ]
