@@ -1,6 +1,6 @@
 #  workflow for Infrastracture update #
 
-name: Infra
+name: update-Infra
 on:
   push:
     branches: [ main ]
@@ -10,6 +10,8 @@ jobs:
   develop:
     runs-on: ubuntu-latest
     steps: 
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Execute installation workflow
         uses: cloudify-cosmo/execute-workflow-action@v1.1
         with:
