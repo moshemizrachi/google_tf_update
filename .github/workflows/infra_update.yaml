@@ -9,6 +9,7 @@ on:
 jobs:
   develop:
     runs-on: ubuntu-latest
+    environment: 'Terraform_Env'
     steps: 
       - name: Checkout code
         uses: actions/checkout@v2
