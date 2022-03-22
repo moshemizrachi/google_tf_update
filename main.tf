@@ -33,7 +33,7 @@ resource "google_compute_firewall" "firewall" {
         ports    = ["22", "8080", "80"]
     }
 }
-
+#
 resource "google_compute_instance" "vm" {
     name         = "${var.prefix}-vm-${random_id.suffix.hex}"
     machine_type = var.instance_type
