@@ -2,7 +2,7 @@
 
 name: update-Infra
 on:
-  push:
+#  push:
     branches: [ main ]
     paths:
     - main.tf
